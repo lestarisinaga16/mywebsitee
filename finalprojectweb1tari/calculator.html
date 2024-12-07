@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Calculator</title>
+  </head>
+  <body class="font-sans bg-gray-100">
+    <!-- Header -->
+    <header class="bg-pink-300 text-black text-center py-6">
+      <h1 class="text-4xl font-bold"><i class="fas fa-star"></i> Calculator</h1>
+    </header>
+
+    <!-- Main Container -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+      <!-- Navigation Menu (Tampilan Menu Seperti Registration) -->
+      <nav class="bg-pink-300 p-4 rounded shadow-md text-center">
+        <ul class="space-y-4">
+          <li
+            class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-pink-400"
+          >
+            <a href="index.html">Home</a>
+          </li>
+          <li
+            class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-pink-400"
+          >
+            <a href="aboutpage.html">About Me</a>
+          </li>
+          <li
+            class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-pink-400"
+          >
+            <a href="myGallery.html">My Gallery</a>
+          </li>
+          <li
+            class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-pink-400"
+          >
+            <a href="Registration.html">Registration Form</a>
+          </li>
+          <li
+            class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-pink-400"
+          >
+            <a href="calculator.html">Calculator</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main Content (Calculator) -->
+      <main class="bg-pink-300 p-6 rounded shadow-md md:col-span-2">
+        <h2 class="text-2xl font-bold mb-6">Calculator</h2>
+        <div
+          class="bg-pink-100 p-4 rounded shadow-md flex flex-col items-center space-y-2"
+        >
+          <p
+            id="display"
+            class="w-full bg-pink-200 text-right p-4 rounded text-xl font-mono"
+          >
+            0
+          </p>
+
+          <!-- Calculator Buttons -->
+          <div class="grid grid-cols-4 gap-2 w-full">
+            <button
+              onclick="press('7')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              7
+            </button>
+            <button
+              onclick="press('8')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              8
+            </button>
+            <button
+              onclick="press('9')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              9
+            </button>
+            <button
+              onclick="press('/')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              /
+            </button>
+
+            <button
+              onclick="press('4')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              4
+            </button>
+            <button
+              onclick="press('5')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              5
+            </button>
+            <button
+              onclick="press('6')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              6
+            </button>
+            <button
+              onclick="press('*')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              ×
+            </button>
+
+            <button
+              onclick="press('1')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              1
+            </button>
+            <button
+              onclick="press('2')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              2
+            </button>
+            <button
+              onclick="press('3')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              3
+            </button>
+            <button
+              onclick="press('-')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              -
+            </button>
+
+            <!-- Tombol Nol (0) -->
+            <button
+              onclick="press('0')"
+              class="btn bg-white p-4 rounded shadow col-span-1"
+            >
+              0
+            </button>
+            <button
+              onclick="press('.')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              .
+            </button>
+            <!-- Tombol C di tengah titik dan + -->
+            <button
+              onclick="clearDisplay()"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              C
+            </button>
+            <button
+              onclick="press('+')"
+              class="btn bg-white p-4 rounded shadow"
+            >
+              +
+            </button>
+
+            <!-- Tombol "=" -->
+            <button
+              onclick="calculate()"
+              class="btn bg-pink-400 p-4 rounded shadow col-span-4"
+            >
+              =
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <!-- Sidebar (Tampilan Seperti Sidebar di Registration) -->
+      <aside class="bg-pink-300 p-4 rounded shadow-md">
+        <h1 class="text-lg font-bold mb-4">
+          <i class="fas fa-address-book"></i> Contact Me
+        </h1>
+        <p>Hubungi saya dari apk ini:</p>
+        <ul class="space-y-2">
+          <li>
+            <i class="fab fa-instagram"></i>
+            <a
+              href="https://www.instagram.com/lestarisng?igsh=MTB3cGQ2ZnFwb2J4bA=="
+              target="_blank"
+              class="text-blue-500 underline"
+              >Instagram</a
+            >
+          </li>
+        </ul>
+        <h2 class="text-lg font-bold mt-6">
+          <i class="fas fa-book"></i> My Favorite Articles
+        </h2>
+        <ul class="space-y-2">
+          <li>
+            <i class="fas fa-link"></i>
+            <a
+              href="https://moodle.unai.edu/login/index.php"
+              target="_blank"
+              class="text-blue-500 underline"
+              >moodle.unai.edu</a
+            >
+          </li>
+          <li>
+            <i class="fas fa-keyboard"></i>
+            <a
+              href="https://10fastfingers.com/typing-test/indonesian"
+              target="_blank"
+              class="text-blue-500 underline"
+              >fastfingers</a
+            >
+          </li>
+          <li>
+            <i class="fab fa-tiktok"></i>
+            <a
+              href="https://www.tiktok.com/foryou?source=twa"
+              target="_blank"
+              class="text-blue-500 underline"
+              >TikTok</a
+            >
+          </li>
+        </ul>
+        <h3 class="text-lg font-bold mt-6">
+          <i class="fas fa-external-link-alt"></i> Tautan Lainnya
+        </h3>
+        <ul class="space-y-2">
+          <li>
+            <i class="fas fa-university"></i>
+            <a
+              href="https://fti.unai.edu"
+              target="_blank"
+              class="text-blue-500 underline"
+              >FTI UNAI</a
+            >
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <a
+              href="https://unai.edu"
+              target="_blank"
+              class="text-blue-500 underline"
+              >UNAI</a
+            >
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-pink-300 text-center py-4 mt-6">
+      <p>PS: Please try resizing the browser.</p>
+    </footer>
+
+    <script>
+      let expression = "";
+
+      function press(value) {
+        if (
+          value === "." &&
+          expression
+            .split(/[-+*/]/)
+            .pop()
+            .includes(".")
+        ) {
+          return;
+        }
+
+        if (["+", "-", "*", "/"].includes(value)) {
+          if (["+", "-", "*", "/"].includes(expression.slice(-1))) {
+            expression = expression.slice(0, -1);
+          }
+        }
+
+        expression += value;
+        document.getElementById("display").textContent = expression;
+      }
+
+      function clearDisplay() {
+        expression = "";
+        document.getElementById("display").textContent = "0";
+      }
+
+      function calculate() {
+        try {
+          expression = eval(expression).toString();
+          document.getElementById("display").textContent = expression;
+        } catch (e) {
+          document.getElementById("display").textContent = "Error";
+        }
+      }
+    </script>
+  </body>
+</html>

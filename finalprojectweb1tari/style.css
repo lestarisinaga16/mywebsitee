@@ -1,0 +1,326 @@
+* {
+  /* to ensure proper paddings */
+  box-sizing: border-box;
+}
+html {
+  /* set a consistent font across the website */
+  font-family: "Lucida Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* use . to refer to a class */
+.header {
+  background-color: #e4b2dd;
+  color: black;
+  padding: 15px;
+  text-align: center;
+}
+
+/* 
+    using CSS grid as a bas of our layout
+    that was marked with containers 
+*/
+
+.container {
+  display: grid;
+  /* single column layout for website devices */
+  grid-template-columns: 1 fr;
+  grid-gap: 20px;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(250, 238, 238);
+}
+
+.menu {
+  background-color: #e4b2dd;
+  padding: 20px;
+  text-align: center;
+  background-color: #e4b2dd;
+  flex-direction: column;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #4c4848;
+  color: white;
+  text-align: center;
+  box-shadow: 0 1px 3px lightgray, #fafcfb;
+  border-radius: 3px;
+}
+
+.menu li:hover {
+  background-color: #9a7d94;
+}
+
+.main {
+  background-color: #e4b2dd;
+  padding: 20px;
+  max-width: 800px;
+  margin: 10px;
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.aside {
+  background-color: #e4b2dd;
+  color: rgb(27, 23, 23);
+  padding: 15px;
+  text-align: center;
+  text-align: 14px;
+  box-shadow: 0 1px 3px lightgray, gray;
+}
+
+/* styling for the footer secrion */
+.footer {
+  background-color: rgb(204, 160, 160);
+  color: rgb(13, 12, 12);
+  padding: 15px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.-Gallery.img {
+  width: 100;
+  max-width: 200px;
+  aspect-ratio: 3/4;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.Registration-form {
+  background-color: #2f2c2c;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.Registration-form h2 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.rForm-group {
+  margin-bottom: 20px;
+}
+
+.rForm-group input,
+.rForm-group textarea {
+  width: 100%; /* atur lebar input dan textarea untuk memenuhi form group */
+  padding: 10px; /* atur padding untuk membuat jarak antara input dan border */
+  border: 1px solid #ccc; /* atur border untuk membuat garis di sekitar input */
+  border-radius: 5px; /* atur border radius untuk membuat sudut input menjadi lebih halus */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+/* Input Field Styles */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #ebdfe1;
+  outline: none;
+}
+
+/* Error Message Styles */
+.rForm-group .error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Submit Button Styles */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #c595ba;
+  color: rgb(12, 12, 12);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #dda7b0;
+}
+
+.asideRN {
+  background-color: #c595ba;
+  color: rgb(102, 93, 93);
+  padding: 15px;
+  text-align: center;
+  text-align: 14px;
+  box-shadow: 0 1px 3px lightgray, gray;
+}
+
+.nav-link {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+}
+.active {
+  background-color: #c595ba;
+  color: rgb(7, 7, 7);
+}
+.content-box {
+  background-color: #181817;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(124, 122, 122, 0.3);
+  display: inline-block;
+  width: 80%;
+  max-width: 600px;
+}
+.content-box img {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 280px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery::after {
+  content: "";
+  width: 350px;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    max-width: 600px; /* atur lebar maksimum untuk tampilan mobile */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main {
+    max-width: 400px; /* atur lebar maksimum untuk tampilan mobile kecil */
+  }
+}
+
+/* styling for a mobile phones sizes */
+@media only screen and (min-width: 700px) {
+  .container {
+    grid-template-columns: 1fr 2fr 1fr;
+    /* using 3 layout column */
+  }
+
+  .responsive-img {
+    max-width: 680px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Calculator Styles */
+  .calculator {
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    border: 5px solid #8b5c88;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgb(70, 67, 67);
+  }
+
+  #display {
+    grid-column: span 4;
+    font-size: 1.2rem;
+    text-align: right;
+    min-height: 30px;
+    padding: 10px;
+    border: 1px solid rgb(78, 77, 76);
+    background-color: white;
+    border-radius: 5px;
+    color: rgb(72, 82, 92);
+    font-family: Impact, sans-serif;
+  }
+
+  button {
+    font-family: Impact, sans-serif;
+    color: rgb(72, 82, 92);
+    padding: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 1px solid rgb(22, 21, 21);
+    border-radius: 5px;
+    background-color: white;
+    transition: background-color 0.2s;
+  }
+
+  button:hover {
+    background-color: #f0f0f0;
+  }
+
+  .span-2 {
+    grid-column: span 4;
+  }
+}
